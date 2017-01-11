@@ -1,7 +1,10 @@
-;(function(window){
+;
+(function(window) {
 
-	if( !window ) return;
+    if (!window) return;
 
-	window.amc = {}
+    var amc = {};
+
+    window.Amc = amc;
 
 })(window);

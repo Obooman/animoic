@@ -1,0 +1,31 @@
+{
+  "name": "animoic",
+  "version": "0.0.1",
+  "description": "Tiny animation tool for mobile and pc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/animoic/animoic.git"
+  },
+  "keywords": [
+    "animoic",
+    "animation",
+    "javascript"
+  ],
+  "author": "oboo chin <cheng.12@live.cn> (github.com/obooman)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/animoic/animoic/issues"
+  },
+  "homepage": "https://github.com/animoic/animoic#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "webpack": "^2.2.0-rc.3"
+  }
+}

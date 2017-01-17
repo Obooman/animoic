@@ -12,3 +12,8 @@ static animation methods
 
 animation stacks
 	animoic.stack(sorted by creating time)
+
+animatiom life circle
+	onstart
+	onupdate -> progress
+	onend

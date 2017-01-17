@@ -6,6 +6,6 @@ class Easing{
 
 }
 
-class Orbit{
+class Wiggle{
 
 }

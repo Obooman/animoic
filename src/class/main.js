@@ -1,11 +1,19 @@
-class Tween{
+class Bezier{
 
 }
 
-class Easing{
+// down and up timing function
+class Bounce extends Bezier{
 
 }
 
-class Wiggle{
+
+// repeat regularly
+class Wiggle extends Bezier{
+
+}
+
+// jump to somewhere
+class Elastic extends Bezier{
 
 }

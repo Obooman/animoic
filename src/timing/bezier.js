@@ -1,4 +1,4 @@
-import * as bezierCurve from './easing/bezier-curve';
+import BezierCurve from './easing';
 
 export default class Bezier{
 	constructor(SVGPath){
@@ -23,16 +23,5 @@ export default class Bezier{
 
 			}
 		})
-	}
-
-	queueUp = (bezierObject) => {
-		if(this.queue){
-			this.queue.push(bezierObject)
-		} else {
-			this.queue = [];
-			this.queue.push(bezierObject)
-
-			// global.queues.push(this.queue);
-		}
 	}
 }

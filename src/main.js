@@ -1,23 +1,36 @@
 import Linear from './timing'
 
 export default class Animation{
-	constructor(
-		aniObj={
-			duration:1000,
-			delay:0,
-			onstart:function(){},
-			onend:function(){},
-			onupdate:function(){},
-			timing:new Linear()
-		}
-	){
+	constructor(aniObj){
 		this.params = {...aniObj}
-
-		this.timePercentage = 0
 	}
 
 	play(){
+		if( this.playing ) return;
 
+		this.playing = true;
+	}
+
+	draw = (timestamp) => {
+		const {
+			timing,onupdate,onend,onstart,duration,delay
+		} = this.params
+
+		if( !this.startTime ){
+			this.startTime = timestamp
+			onstart && onstart(timestamp);
+		}
+
+		let progress = (timestamp - startTime)/duration;
+		let targetValue = timing(progress)
+
+		onupdate && onupdate(targetValue);
+
+		if( progress >= 1 ){
+			onend && onend();
+		} else {
+			requestAnimationFrame(this.draw)
+		}
 	}
 
 	pause(){

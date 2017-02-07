@@ -27,12 +27,16 @@ class Animoic{
 		}
 	}*/
 
-	tween = (aniObj) => {
-		if( !arguments.length ){
-			log("There's no config object");
-			return;
+	tween = (
+		aniObj={
+			duration:1000,
+			delay:0,
+			onstart:function(){},
+			onend:function(){},
+			onupdate:function(){},
+			timing:new Linear()
 		}
-
+	) => {
 		const {
 			duration,delay,timing,onstart,onend,onupdate
 		} = aniObj;
